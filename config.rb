@@ -54,14 +54,17 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 activate :blog do |blog|
+  blog.layout = "article"
+  blog.permalink = ":year-:month-:day-:title"
   blog.default_extension = ".markdown"
 end
 
 set :markdown_engine, :redcarpet
 set :markdown,  :fenced_code_blocks => true,
-                :autolink => true, 
+                :autolink => true,
                 :smartypants => true
 
+activate :directory_indexes
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
