@@ -6,3 +6,5 @@ gem "middleman", "~>3.0.13"
 gem "middleman-blog"
 gem "redcarpet"
 gem 'middleman-gh-pages'
+gem 'rb-inotify', '~> 0.9'
+gem "slim"

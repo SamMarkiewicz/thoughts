@@ -1,6 +1,13 @@
 <% wrap_layout :layout do %>
-  <article>
+  <article class="m-blog--article">
     <h1><%= current_page.title %></h1>
     <%= yield %>
   </article>
+<% end %>
+
+<% content_for :footer_article do %>
+  <footer>
+    <figure src="" />
+    <p>I am a webdesigner and </p>
+  </footer>
 <% end %>

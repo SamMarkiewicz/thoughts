@@ -1,8 +1,18 @@
+---
+description: My Middleman Blog Post is the best post over
+title: It is the page title
+attr: h1
+---
+
 <% blog.articles[0...5].each do |article| %>
-  <article>
-    <h2><a href="<%= article.url %>"><%= article.title %></a></h2>
-    <time><%= article.date.strftime('%b %e, %Y') %></time>
-    <p><%= article.data.teaser %></p>
-    <p><a href="<%= article.url %>">Read more.</a></p>
+  <article class="m-blog--short">
+    <div>
+      <h2><a href="<%= article.url %>"><%= article.title %></a></h2>
+      <time><%= article.date.strftime('%b %e, %Y') %></time>
+    </div>
+    <div>
+      <p><%= article.data.teaser %></p>
+      <p><a href="<%= article.url %>">Read more.</a></p>
+    </div>
   </article>
 <% end %>

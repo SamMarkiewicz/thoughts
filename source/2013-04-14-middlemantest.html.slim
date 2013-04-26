@@ -1,0 +1,55 @@
+---
+title: My Middleman Blog Post
+published: false
+teaser: Skills, abilities, all that years after years makes of you a “professional” or that kind-of person, is a lot like growing a beard…
+description: My Middleman Blog Post is the best post over
+pagetitle: It is the page title
+attr: h2
+---
+
+p
+  'Skills, abilities, all that years after years makes of you a “professional” or that kind-of person, is a lot like growing a beard…
+
+p
+  'Yes, I know, this is a pretty “man-centric” point of view, so, all my apologies ladies.
+
+p
+  'Years ago,
+  strong
+    'I remember my first downy mustache.
+  'And how much I was proud to wear it.
+  'You know, I was feeling like a man.
+  'Of course, I was nothing more than just a teen. Another teen, with a nerd’s face. But I was feeling like Clark Gable.
+  em
+    'Everyone was looking at me with an indulgent smile, while thinking that I was ridiculous.
+  'But I had this will of one day having a glorious beard.
+
+p
+  'This is why, day after day, weeks after weeks, I learnt how to grow a decent beard.
+
+p
+  'Believe me, this is not an easy affair. And every people who tried can acquiesce. This is a matter of patience, and love. Nothing less. This is a complete dedication an every day job. A mission. Ok, I exagerate, but truly, this is a lot of maintenance.
+
+p
+  'Remember, this is something that you wear every day. This is something you can’t hide. You can’t let it being messy, you can’t let it be poor. You have to find the right balance.
+
+p
+  'You have to let it grow every day, and cut what is not necessary, as time goes by. You have to find the right length. The one you’ll be comfortable with. With you, and with others.
+
+p
+  'And so, years after years, you begin to be really proud of your beard. It begins to be a part of you, of who you are, and of what defines you among the crowd.
+  'Of course, you can decide to shave it one day, and start again from zero, but all those days have been a waste of time. Never.
+
+p
+  'So, to all of you, start growing your own mustache, or keep taking good care of your beard !
+
+/ ul
+/   li.previous
+/     - prev_article = current_article.previous_article
+/     - if prev_article
+/       a href="#{prev_article.url}" rel="prev" title="Previous article: #{prev_article.title}" Previous
+/   li.next
+/     - next_article = current_article.next_article
+/     - if next_article
+/       a href="#{next_article.url}" rel="next" title="Next article: #{next_article.title}" Next
+

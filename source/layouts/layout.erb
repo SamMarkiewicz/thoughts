@@ -5,22 +5,23 @@
 
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-
+    <meta name="description" content="<%= data.page.description %>" />
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= data.page.title || "Random thoughts by Sam Markiewicz, web and graphic design" %></title>
-    <link href='http://fonts.googleapis.com/css?family=Poly' rel='stylesheet' type='text/css'>
+    <title><%= data.page.title "- Sam Markiewicz, webdesigner and front-end developer" || "Random thoughts by Sam Markiewicz, web and graphic design" %></title>
+    <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "normalize", "all" %>
   </head>
 
   <body>
     <header>
-      <a href="/">
-        <img class="l-logo" src="../images/logo-sam_@2x.png"/>
-      </a>
-      <h1 class="m-baseline">
-        Thoughts, random thoughts by Sam Markiewicz, web and graphic designer.
-      </h1>
+      <<%= data.page.attr %>>Sam Markiewicz - Webdesign, Front-end development, lettering</<%= data.page.attr %>>
+      <p class="m-baseline">
+        My name is Sam Markiewicz. I'm a freelance webdesigner and front-end developper.<br/>
+        You can find some of my jobs <a href="http://sammarkiewi.cz">on my portfolio</a> and some others <a href="http://www.dribbble.com/sammarkiewicz">on my dribbble</a>.
+        <br/>
+        This is the place where I share my random thoughts.
+      </p>
     </header>
     <%= yield %>
     <%= javascript_include_tag  "all" %>
