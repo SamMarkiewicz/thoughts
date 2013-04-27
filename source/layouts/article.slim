@@ -1,0 +1,50 @@
+- wrap_layout :layout do
+  header class="m-header--article"
+    h2
+      a href="/">Sam Markiewicz - Webdesign, Front-end development, lettering
+  div class="banner #{data.page.banner}"
+  article class="m-blog--article"
+    h1
+      == current_page.title
+    time
+      == current_page.date.strftime('%b %e, %Y')
+    == yield
+    ul class="m-article--navigation"
+      - prev_article = current_article.previous_article
+      - if prev_article
+        li.previous
+          a href="#{prev_article.url}" rel="prev" title="Previous article: #{prev_article.title}" Previous
+      - next_article = current_article.next_article
+      - if next_article
+        li.next
+          a href="#{next_article.url}" rel="next" title="Next article: #{next_article.title}" Next
+      li.social
+        a href="https://twitter.com/share" class="twitter-share-button" data-via="sammarkz"
+          'Tweet
+    javascript:
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  aside
+    figure
+      img src="../images/profile-small.jpg"
+    p
+      'My name is
+      strong
+        'Sam Markiewicz
+      '.
+      br
+      'I am a freelance webdesigner and front-end developer.
+      br
+      'I also practise lettering.
+      br
+      'You can find me on
+      a href="https://twitter.com/sammarkz"
+        'twitter
+      ', see my works on
+      a href="http://dribbble.com/sammarkiewicz"
+        'dribbble
+      'and take a look
+      br
+      'at my recent projects on
+      a href="http://sammarkiewi.cz"
+        'my portfolio
+      '.

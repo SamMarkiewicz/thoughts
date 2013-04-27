@@ -1,0 +1,32 @@
+<% wrap_layout :layout do %>
+  <header class="m-header--article">
+    <<%= data.page.attr %>><a href="/">Sam Markiewicz - Webdesign, Front-end development, lettering</a></<%= data.page.attr %>>
+  </header>
+  <article class="m-blog--article">
+    <h1><%= current_page.title %></h1>
+    <%= yield %>
+    <ul>
+    <li class="previous">
+      <% prev_article = current_article.previous_article %>
+      <% if prev_article %>
+        <a href="#{prev_article.url}" rel="prev" title="Previous article: #{prev_article.title}"> Previous</a>
+      <% end %>
+    </li>
+
+
+
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="sammarkz">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </article>
+  <aside>
+    <figure>
+      <img src="../images/profile-small.jpg" />
+    </figure>
+    <p>My name is <strong>Sam Markiewicz</strong>.<br/> I am a freelance webdesigner and front-end developer.<br/>
+    I also practise lettering.
+    <br/>
+    You can find me on <a href="https://twitter.com/sammarkz">twitter</a>, see my works on <a href="http://dribbble.com/sammarkiewicz">dribbble</a> and take a look<br/> at my recent projects on <a href="http://sammarkiewi.cz">my portfolio</a>. </p>
+  </aside>
+<% end %>
+
+

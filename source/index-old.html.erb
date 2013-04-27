@@ -1,0 +1,37 @@
+---
+description: The blog of Sam Markiewicz, web and graphic designer, front-end developer. Thoughts with bits of webdesign, and various other things.
+---
+
+header class="m-header--index"
+  h1
+    a href="/"
+      'Sam Markiewicz - Webdesign, Front-end development, lettering
+  p class="m-baseline"
+    'My name is Sam Markiewicz. I'm a freelance webdesigner and front-end developper.
+    br
+    'You can find some of my jobs
+    a href="http://sammarkiewi.cz"
+      'on my portfolio
+    'and some others
+    a href="http://www.dribbble.com/sammarkiewicz"
+      'on my dribbble
+    '.
+    br
+    'This is the place where I share my random thoughts.
+
+
+<% blog.articles[0...5].each do |article| %>
+  article class="m-blog--short"
+    div
+      h2
+        a href="<%= article.url %>">
+        == article.title
+      time
+        == article.date.strftime('%b %e, %Y')
+    div
+      p
+        == article.data.teaser
+      p
+        a href="<%= article.url %>"
+          'Read more
+<% end %>

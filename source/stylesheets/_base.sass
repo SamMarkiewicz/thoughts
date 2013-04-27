@@ -1,12 +1,17 @@
 body
   background: white
-  max-width: 800px
-  width: 100%
-  margin: 0 auto
   padding: 4em 0 0
   font-family: 'Gentium Book Basic', serif
   color: #444
   font-size: 85.7%
+
+header,
+footer,
+article,
+aside
+  max-width: 800px
+  width: 100%
+  margin: 0 auto
 
 p
   margin: 0 0 1em
@@ -18,17 +23,32 @@ strong
   font-weight: 700
 
 header
-  padding: 0 0 2em
-  margin: 0 0 9em
   border-bottom: 1px solid #efefef
   h1, h2
-    width: 70px
-    height: 70px
-    background: transparent url('../images/logo-sam_@2x.png') 0 0 no-repeat
-    background-size: 70px 70px
-    display: block
-    text-indent: -999em
-    margin: 0 auto 1.5em
+    a
+      width: 70px
+      height: 70px
+      background: transparent url('../images/logo-sam_@2x.png') 0 0 no-repeat
+      background-size: 70px 70px
+      display: block
+      text-indent: -999em
+      margin: 0 auto 1.5em
+      border-bottom: 0 none
+    a:hover
+      border-bottom: 0 none
+  h2
+    a
+      width: 50px
+      height: 50px
+      background: transparent url('../images/logo-sam_@2x.png') 0 0 no-repeat
+      background-size: 50px 50px
+
+.m-header--index
+  padding: 0 0 2em
+  margin-bottom: 9em
+
+.m-header--article
+  padding: 0 0 2em
 
 .m-baseline
   font-size: 1.2em
@@ -41,16 +61,16 @@ header
 
 .m-blog--short
   padding: 0 0 1.5em
-  margin: 0 0 1.5em
+  margin-bottom: 3em
   border-bottom: 1px solid #efefef
   overflow: hidden
   div
-    width: 40%
+    width: 35%
     float: left
     display: inline-block
   div + div
-    width: 60%
-    padding: 0 0 0 10%
+    width: 65%
+    padding: 0 0 0 5%
     -webkit-box-sizing: border-box
     -moz-box-sizing: border-box
     box-sizing: border-box
@@ -59,12 +79,15 @@ header
   h2
     margin: 0 0 .65em
     font-family: 'Lato', sans-serif
+    text-transform: uppercase
+    letter-spacing: 0.085em
     a
       color: #444
       text-decoration: none
       text-transform: uppercase
       letter-spacing: 0.085em
       border-bottom: 0 none
+
 time
   color: #8D796E
   font-style: italic
@@ -83,14 +106,57 @@ a
     border-bottom: 1px solid white
 
 .m-blog--article
+  margin-bottom: 5em
+  padding: 0 0 4em
+  border-bottom: 1px solid #efefef
   h1
     font-family: 'Lato', sans-serif
     color: #444
     text-transform: uppercase
     letter-spacing: 0.085em
-    margin: 0 0 2em
+    margin: 0 0 .75em
   p
     font-size: 1.45em
     line-height: 1.7em
+  time
+    margin: 0 0 4em
+    display: block
 
+.m-article--navigation
+  overflow: hidden
+  margin: 5em 0 0
+  padding: 0
+  li
+    list-style-type: none
+    float: left
+    display: inline-block
+  .social
+    float: right
+
+footer
+  color: #8d796e
+  text-align: center
+  padding-bottom: 3em
+
+aside
+  overflow: hidden
+  padding: 0 0 4em
+  margin-bottom: 4em
+  border-bottom: 1px solid #efefef
+  p
+    font-size: 1.15em
+    line-height: 1.6em
+    color: #8D796E
+  a
+    color: #8D796E
+    border-color: #8D796E
+  img
+    -webkit-border-radius: 50%
+    border-radius: 50%
+    width: 110px
+    float: left
+    display: inline-block
+    margin: 0 3em 0 0
+  strong
+    font-style: italic
 
