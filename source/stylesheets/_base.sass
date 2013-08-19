@@ -14,6 +14,10 @@ aside
   max-width: 800px
   width: 100%
   margin: 0 auto
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -o-box-sizing: border-box
+  box-sizing: border-box
 
 p
   margin: 0 0 1em
@@ -136,6 +140,8 @@ a
   overflow: hidden
   margin: 5em 0 0
   padding: 0
+  a
+    color: #8D796E
   li
     list-style-type: none
     float: left
@@ -185,4 +191,25 @@ aside
     margin: 0 3em 0 0
   strong
     font-style: italic
+
+quote
+  display: block
+  margin: 2em 0 2em 1em
+  padding: 0 0 0 1em
+  border-left: 2px solid #efefef
+  font-style: italic
+  color: #8A8A7B
+
+@media only screen and (max-width:800px)
+  body
+    border: 15px solid #444
+  article, aside
+    padding-left: 1em !important
+    padding-right: 1em !important
+
+
+@media only screen and (max-width:568px)
+  .m-blog--article
+    p
+      font-size: 1.1em
 
