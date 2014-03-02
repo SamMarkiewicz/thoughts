@@ -1,6 +1,11 @@
+%ptserif
+  font-family: 'PT Serif', serif
+
 body
-  background: white
-  font-family: 'Merriweather', serif
+  // background: white
+  background: #FFF8F8
+  // font-family: 'Merriweather', serif
+  @extend %ptserif
   font-weight: 400
   color: #444
   font-size: 85.7%
@@ -10,7 +15,8 @@ body
 header,
 footer,
 article,
-aside
+aside,
+.m-header--index div
   max-width: 800px
   width: 100%
   margin: 0 auto
@@ -33,31 +39,41 @@ strong
 
 header
   border-bottom: 1px solid #efefef
-  h1, h2
-    a
-      width: 70px
-      height: 70px
-      background: transparent url('../images/logo-2.png') 0 0 no-repeat
-      // background-size: 70px 70px
-      display: block
-      text-indent: -999em
-      margin: 0 auto 1.5em
-      border-bottom: 0 none
-    a:hover
-      border-bottom: 0 none
-  h2
-    a
-      width: 70px
-      height: 70px
-      background: transparent url('../images/logo-2.png') center center no-repeat
-      // background-size: 50px 50px
+h1, h2
+  // text-align: center
+  font-family: 'PT Sans', sans-serif
+  font-weight: 400
+  font-size: 1.4em
+  span
+    font-size: 2.5em
+    display: block
+    @extend %ptserif
+  a
+    // width: 70px
+    // height: 70px
+    // background: transparent url('../images/logo-2.png') 0 0 no-repeat
+    // background-size: 70px 70px
+    display: block
+    color: #F8595B
+    // text-indent: -999em
+    margin: 0 auto 2.5em
+    border-bottom: 0 none
+  a:hover
+    border-bottom: 0 none
+h2
+  a
+    // width: 70px
+    // height: 70px
+    // background: transparent url('../images/logo-2.png') center center no-repeat
+    // background-size: 50px 50px
 
 .m-header--index
   padding: 2em 0
   margin-bottom: 9em
   max-width: 100%
   min-height: 380px
-  background: transparent url('../images/bg-2.jpg') 0 0 no-repeat
+  background: white
+  // background: transparent url('../images/bg-2.jpg') 0 0 no-repeat
   -webkit-background-size: cover
   background-size: cover
   h1
@@ -65,16 +81,26 @@ header
 .m-header--article
   padding: 0 0 .5em
   margin-bottom: 3em
+  h2
+    margin-bottom: 0
+  a
+    margin-bottom: .75em !important
+  span
+    text-indent: -999em
+    display: inline-block
 
 .m-baseline
-  font-size: 1.2em
-  line-height: 2.25em
-  text-align: center
-  color: white
+  font-size: 1.3em
+  line-height: 2em
+  // text-align: center
+  // color: white
+  color: #969595
   font-weight: 300
   a
-    color: white
-    border-color: #8D796E
+    // color: white
+    color: #F8484A
+    // border-color: #8D796E
+    border-color: #efefef
 
 .m-blog--short
   padding: 0 0 1.5em
@@ -93,13 +119,20 @@ header
     box-sizing: border-box
     font-size: 1.15em
     line-height: 1.5em
+    a
+      color: #F8484A
+      text-decoration: none
+      border-bottom: 0 none
   h2
     margin: 0 0 .65em
     font-family: 'PT Sans', sans-serif
+    color: #969595
     a
-      color: #444
+      // color: #444
+      color: #969595
       text-decoration: none
       border-bottom: 0 none
+      margin-bottom: 0
 
 time
   color: #8D796E
@@ -108,9 +141,10 @@ time
   font-size: 1em
 
 a
-  color: #444
+  color: #F8484A
   text-decoration: none
-  border-bottom: 1px solid #444
+  // border-bottom: 1px solid #444
+  border-bottom: 1px solid #efefef
   padding: 0 0 .25em
   -webkit-transition: all .2s ease-in-out
   -moz-transition: all .2s ease-in-out
@@ -126,7 +160,9 @@ a
   max-width: 750px
   h1
     font-family: 'PT Sans', sans-serif
-    color: #444
+    // color: #444
+    color: #969595
+    font-size: 2.5em
     margin: 0 0 .3em
   p
     font-size: 1.25em
