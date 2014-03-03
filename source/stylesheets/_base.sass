@@ -67,9 +67,16 @@ h2
     // background: transparent url('../images/logo-2.png') center center no-repeat
     // background-size: 50px 50px
 
+h3
+  font-family: 'PT Sans', sans-serif
+  font-weight: 400
+  font-size: 1.8em
+  margin: 2.3em 0
+  color: #969595
+
 .m-header--index
-  padding: 2em 0
-  margin-bottom: 9em
+  padding: 4em 0
+  margin-bottom: 6em
   max-width: 100%
   min-height: 380px
   background: white
@@ -85,9 +92,9 @@ h2
     margin-bottom: 0
   a
     margin-bottom: .75em !important
-  span
-    text-indent: -999em
-    display: inline-block
+.m-title--back-home span
+  text-indent: -999em
+  display: inline-block
 
 .m-baseline
   font-size: 1.3em
@@ -103,8 +110,8 @@ h2
     border-color: #efefef
 
 .m-blog--short
-  padding: 0 0 1.5em
-  margin-bottom: 3em
+  padding: 0 0 2em
+  margin-bottom: 4em
   border-bottom: 1px solid #efefef
   overflow: hidden
   div
@@ -171,6 +178,7 @@ a
   time
     margin: 0 0 4em
     display: block
+    color: #ccc
 
 .m-article--navigation
   overflow: hidden
@@ -198,6 +206,7 @@ a
   font-weight: 300
   font-style: italic
   margin-bottom: .4em !important
+  color: #ccc
   iframe
     width: 80px !important
 
@@ -241,10 +250,20 @@ quote
 
 @media only screen and (max-width:800px)
   body
-    border: 15px solid #444
+    border: 15px solid #efefef
   article, aside
     padding-left: 1em !important
     padding-right: 1em !important
+  .m-header--index
+    padding: 2em 1em
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    -o-box-sizing: border-box
+    box-sizing: border-box
+  .m-title--back-home
+    position: absolute !important
+    margin-left: -25px
+    left: 50% !important
 
 
 @media only screen and (max-width:568px)

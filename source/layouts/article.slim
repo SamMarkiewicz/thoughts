@@ -1,17 +1,16 @@
 - wrap_layout :layout do
-  div class="banner"
+  header class="banner"
     img src="../images/#{data.page.banner}"
-  header class="m-header--article"
-    h2
-      a href="/"
-        i class="fa fa-home"
-        span
-          'Sam Markiewicz - Webdesign, Front-end development, lettering
   article class="m-blog--article"
     h1
       == current_page.title
     time
       == current_page.date.strftime('%b %e, %Y')
+    h2 class="m-title--back-home"
+      a href="/"
+        i class="fa fa-home"
+        span
+          'Sam Markiewicz - Webdesign, Front-end development, lettering
     == yield
     p.social
       a href="https://twitter.com/share" class="twitter-share-button" data-via="sammarkz"
