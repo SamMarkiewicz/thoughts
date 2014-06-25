@@ -13,9 +13,9 @@ body
     padding-top: 0
 
 header,
-footer,
+footer div,
 article,
-aside,
+aside div,
 .m-header--index div
   max-width: 800px
   width: 100%
@@ -161,7 +161,7 @@ a
     border-bottom: 1px solid white
 
 .m-blog--article
-  margin-bottom: 5em
+  // margin-bottom: 5em
   padding: 0 0 4em
   border-bottom: 1px solid #efefef
   max-width: 750px
@@ -195,6 +195,14 @@ a
     float: right
     text-align: right
 
+.previous a, .next a
+  background: #F8484A
+  color: white
+  padding: .5em .75em
+  display: inline-block
+  text-align: center
+  min-width: 90px
+
 .social
   float: right
   display: inline-block
@@ -211,28 +219,41 @@ a
     width: 80px !important
 
 footer
-  color: #8d796e
+  max-width: 100%
+  color: white
+  padding-top: 2em
+  background: #1D1D1D
   text-align: center
-  padding-bottom: 3em
+  padding-bottom: 2em
   a
     font-size: 2em
     display: inline-block
     margin: .5em 0.25em 0
+    color: white
+    border-color: #1D1D1D
+    &:hover
+      border-color: #F8595B
 aside
+  max-width: 100%
   overflow: hidden
-  padding: 0 0 4em
-  margin-bottom: 4em
-  border-bottom: 1px solid #efefef
+  padding: 4em 0 4em
+  // margin-bottom: 4em
+  // border-bottom: 1px solid #efefef
+  background: #22313F
   p
     font-size: 1em
     line-height: 1.8em
-    color: #8D796E
+    color: #ecf0f1
   a
-    color: #8D796E
-    border-color: #8D796E
+    color: #ecf0f1
+    border-color: #ecf0f1
+    &:hover
+      border-color: #F8595B
   img
     -webkit-border-radius: 50%
     border-radius: 50%
+    border: 1px solid #ecf0f1
+    padding: .25em
     width: 110px
     float: left
     display: inline-block
@@ -240,13 +261,19 @@ aside
   strong
     font-style: italic
 
-quote
+blockquote
   display: block
-  margin: 2em 0 2em 1em
+  margin: 2em 2em 2em 1em
   padding: 0 0 0 1em
   border-left: 2px solid #efefef
   font-style: italic
   color: #8A8A7B
+  float: left
+  width: 80%
+  position: relative
+  margin-left: -10em
+  p
+    margin-bottom: 0 !important
 
 @media only screen and (max-width:800px)
   body
