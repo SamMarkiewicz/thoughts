@@ -1,6 +1,6 @@
 ---
 title: The man who wanted to run 5k - E01
-published: false
+published: true
 teaser: A few months ago, I started to run. These series of post are the chronicles of these past months, and a collection of thoughts around these runs.
 description: This article talks about the similitude between growing a beard and growing a career.
 pagetitle: The man who wanted to run 5k - E01
