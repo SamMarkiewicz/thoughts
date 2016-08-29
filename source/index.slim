@@ -7,12 +7,12 @@ header class="m-header--index"
   div
     h1
       a href="/"
-        span Thoughts
+        span Notebook
         'the blog of Sam Markiewicz
     p class="m-baseline"
       'My name is Sam Markiewicz.
       br
-      'I'm a freelance webdesigner and front-end developper.
+      'I'm a UX designer and illustrator.
       br
       'You can find some of my jobs
       a href="http://sammarkiewi.cz"
@@ -22,10 +22,10 @@ header class="m-header--index"
         'on my dribbble
       '.
       br
-      'This is the place where I share my random thoughts.
+      'This is the place where I share most of my notes.
 
 
-- blog.articles[0...5].each do |article|
+- blog.articles[0...10].each do |article|
   article class="m-blog--short"
     div
       h2
@@ -39,4 +39,3 @@ header class="m-header--index"
       p
         a href="#{article.url}"
           'Read more
-
